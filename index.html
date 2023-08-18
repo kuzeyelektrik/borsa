@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Borsa</title>
+</head>
+<body>
+    <button onclick="save()">Oyunu Kaydet (Önceki verilerin üzerine yazılır)</button>
+    <button onclick="upload()">Oyunu Yükle (Kayıtlı verileri yükler)</button>
+
+    <h1 id="money">Nakit: 1000₺</h1>
+    <h1 id="worth">Hisseler Toplamı: 0₺</h1>
+    <p class="setStocks" id="setIstanbul">Borsa İstanbul</p>
+    <p class="setStocks" id="setCurrency">Döviz Borsası</p>
+    <p class="setStocks" id="setEmtia">Emtia Borsası</p>
+    <p class="setStocks" id="setBigInvestments">Büyük Yatırımlar</p>
+    <p class="setStocks" id="setCurrency">Banka İşlemleri</p>
+    <p class="setStocks" id="setLegal">Yasal İşlemler</p>
+    <p class="setStocks" id="setBusiness">İşler</p>
+
+
+
+
+
+    <h3>Portföy Dağılımı</h3>
+    <ul id="portfolio">
+    </ul>
+    <ul id="currencyPortfolio">
+    </ul>
+    <ul id="emtiaPortfolio">
+    </ul>
+    <ul id="bigInvestmentsPortfolio">
+    </ul>
+    <ul id="businessPortfolio">
+    </ul>
+    <button id="skipDay">Sonraki gün</button>
+    <button id="newsBtn">Haberler</button>
+    <p id="day">1. gün</p>
+    <div id="stocks">
+        <div class="stock" id="computer">
+            <h2>Bytech Bilgisayar A.Ş.</h2>
+            <p id="computerHolding">Sahip Olunan Lot: 0</p>
+            <p id="computerStatus">0₺</p>
+            <h3 id="computerLot">129₺</h3>
+            <div class="buttons">
+                <button class="buy" id="buyComputer">Al</button>
+                <button class="sell" id="sellComputer">Sat</button>
+                <br><button class="sellAll" id="sellAllComputer">Hepsini sat</button>
+                <br><button class="buyAll" id="buyAllComputer">Mümkün olan hepsini al</button>
+            </div>
+        </div>
+        <div class="stock" id="pharma">
+            <h2>Synover İlaç A.Ş.</h2>
+            <p id="pharmaHolding">Sahip Olunan Lot: 0</p>
+            <p id="pharmaStatus">0₺</p>
+            <h3 id="pharmaLot">191₺</h3>
+            <div class="buttons">
+                <button class="buy" id="buyPharma">Al</button>
+                <button class="sell" id="sellPharma">Sat</button>
+                <br><button class="sellAll" id="sellAllPharma">Hepsini sat</button>
+                <br><button class="buyAll" id="buyAllPharma">Mümkün olan hepsini al</button>
+            </div>
+        </div>
+        <div class="stock" id="farm">
+            <h2>AgroDüşünce Tarım A.Ş.</h2>
+            <p id="farmHolding">Sahip Olunan Lot: 0</p>
+            <p id="farmStatus">0₺</p>
+            <h3 id="farmLot">232₺</h3>
+            <div class="buttons">
+                <button class="buy" id="buyFarm">Al</button>
+                <button class="sell" id="sellFarm">Sat</button>
+                <br><button class="sellAll" id="sellAllFarm">Hepsini sat</button>
+                <br><button class="buyAll" id="buyAllFarm">Mümkün olan hepsini al</button>
+            </div>
+        </div>
+        <div class="stock" id="food">
+            <h2>Quart Gıda A.Ş.</h2>
+            <p id="foodHolding">Sahip Olunan Lot: 0</p>
+            <p id="foodStatus">0₺</p>
+            <h3 id="foodLot">567₺</h3>
+            <div class="buttons">
+                <button class="buy" id="buyFood">Al</button>
+                <button class="sell" id="sellFood">Sat</button>
+                <br><button class="sellAll" id="sellAllFood">Hepsini sat</button>
+                <br><button class="buyAll" id="buyAllFood">Mümkün olan hepsini al</button>
+            </div>
+        </div>
+        <div class="stock" id="dress">
+            <h2>Türk Sert Tekstil A.Ş.</h2>
+            <p id="dressHolding">Sahip Olunan Lot: 0</p>
+            <p id="dressStatus">0₺</p>
+            <h3 id="dressLot">700₺</h3>
+            <div class="buttons">
+                <button class="buy" id="buyDress">Al</button>
+                <button class="sell" id="sellDress">Sat</button>
+                <br><button class="sellAll" id="sellAllDress">Hepsini sat</button>
+                <br><button class="buyAll" id="buyAllDress">Mümkün olan hepsini al</button>
+            </div>
+        </div>
+        <div class="stock" id="water">
+            <h2>Duyar Su A.Ş.</h2>
+            <p id="waterHolding">Sahip Olunan Lot: 0</p>
+            <p id="waterStatus">0₺</p>
+            <h3 id="waterLot">1800₺</h3>
+            <div class="buttons">
+                <button class="buy" id="buyWater">Al</button>
+                <button class="sell" id="sellWater">Sat</button>
+                <br><button class="sellAll" id="sellAllWater">Hepsini sat</button>
+                <br><button class="buyAll" id="buyAllWater">Mümkün olan hepsini al</button>
+            </div>
+            </div>
+            <div class="stock" id="shop">
+                <h2>Aras Büyük Mağazacılık A.Ş.</h2>
+                <p id="shopHolding">Sahip Olunan Lot: 0</p>
+                <p id="shopStatus">0₺</p>
+                <h3 id="shopLot">4780₺</h3>
+                <div class="buttons">
+                    <button class="buy" id="buyShop">Al</button>
+                    <button class="sell" id="sellShop">Sat</button>
+                    <br><button class="sellAll" id="sellAllShop">Hepsini sat</button>
+                <br><button class="buyAll" id="buyAllShop">Mümkün olan hepsini al</button>
+                </div>
+</div>
+<div class="stock" id="oil">
+    <h2>Düşünce Petrol A.Ş.</h2>
+    <p id="oilHolding">Sahip Olunan Lot: 0</p>
+    <p id="oilStatus">0₺</p>
+    <h3 id="oilLot">7800₺</h3>
+    <div class="buttons">
+        <button class="buy" id="buyOil">Al</button>
+        <button class="sell" id="sellOil">Sat</button>
+        <br><button class="sellAll" id="sellAllOil">Hepsini sat</button>
+                <br><button class="buyAll" id="buyAllOil">Mümkün olan hepsini al</button>
+    </div>
+</div>
+<div class="stock" id="build">
+    <h2>Zeus Yapı A.Ş.</h2>
+    <p id="buildHolding">Sahip Olunan Lot: 0</p>
+    <p id="buildStatus">0₺</p>
+    <h3 id="buildLot">11782₺</h3>
+    <div class="buttons">
+        <button class="buy" id="buyBuild">Al</button>
+        <button class="sell" id="sellBuild">Sat</button>
+        <br><button class="sellAll" id="sellAllBuild">Hepsini sat</button>
+                <br><button class="buyAll" id="buyAllBuild">Mümkün olan hepsini al</button>
+    </div>
+</div>
+    </div>
+    <div id="news">
+        <button onclick="closeNews()" id="closeNews">Haberleri kapat</button>
+    </div>
+    <div id="alert">
+        <h1 id="alertHeader">Uyarı</h1>
+        <p id="alertDescription">Hisse alabilmeniz için en az 1 Lot değerinde nakite ihtiyacınız var</p>
+    </div>
+    <div id="currencies">
+        <div class="currency">
+            <h2>Amerikan Doları</h2>
+            <h3 id="dollarText">27.54₺</h3>
+            <input type="number" id="dollarInput" placeholder="00">
+            <br><button class="buy" id="buyDollar">Al</button>
+            <button class="sell" id="sellDollar">Sat</button>
+        </div>
+        <div class="currency">
+            <h2>Euro</h2>
+            <h3 id="euroText">33.54₺</h3>
+            <input type="number" id="euroInput" placeholder="00">
+            <br><button class="buy" id="buyEuro">Al</button>
+            <button class="sell" id="sellEuro">Sat</button>
+        </div>
+        <div class="currency">
+            <h2>Kore Wonu</h2>
+            <h3 id="wonText">0.20₺</h3>
+            <input type="number" id="wonInput" placeholder="00">
+            <br><button class="buy" id="buyWon">Al</button>
+            <button class="sell" id="sellWon">Sat</button>
+        </div>
+        <div class="currency">
+            <h2>İngiltere Poundu</h2>
+            <h3 id="poundText">39.54₺</h3>
+            <input type="number" id="poundInput" placeholder="00">
+            <br><button class="buy" id="buyPound">Al</button>
+            <button class="sell" id="sellPound">Sat</button>
+        </div>
+        <div class="currency">
+            <h2>Rus Rublesi</h2>
+            <h3 id="rubleText">0.29₺</h3>
+            <input type="number" id="rubleInput" placeholder="00">
+            <br><button class="buy" id="buyRuble">Al</button>
+            <button class="sell" id="sellRuble">Sat</button>
+        </div>
+        <div class="currency">
+            <h2>Kuveyt Dinarı</h2>
+            <h3 id="dinarText">88.8₺</h3>
+            <input type="number" id="dinarInput" placeholder="00">
+            <br><button class="buy" id="buyDinar">Al</button>
+            <button class="sell" id="sellDinar">Sat</button>
+        </div>
+    </div>
+    <div id="emtia">
+        <div class="emtiaStock">
+            <h2>Altın</h2>
+            <h3 id="goldText">9100₺</h3>
+            <br><button class="buy" id="buyGold">Al</button>
+            <button class="sell" id="sellGold">Sat</button>
+        </div>
+        <div class="emtiaStock">
+            <h2>Gümüş</h2>
+            <h3 id="silverText">5200₺</h3>
+            <br><button class="buy" id="buySilver">Al</button>
+            <button class="sell" id="sellSilver">Sat</button>
+        </div>
+        <div class="emtiaStock">
+            <h2>Kömür</h2>
+            <h3 id="coalText">2200₺</h3>
+            <br><button class="buy" id="buyCoal">Al</button>
+            <button class="sell" id="sellCoal">Sat</button>
+        </div>
+    </div>
+    <div id="bigInvestments">
+        <div class="bigInvestment">
+            <h2>PetCo.</h2>
+            <p>Evcil hayvan girişimi</p>
+            <h3 id="petText">90320₺</h3>
+            <input id="petInput" type="number" min="1" max="100" placeholder="Yüzde giriniz">
+            <br><button class="buy" id="buyPet">Ortak Ol</button>
+            <button class="sell" id="sellPet">Hisse Sat</button>
+        </div>
+        <div class="bigInvestment">
+            <h2>Dürtü Bank</h2>
+            <p>Yeni kurulan bir banka</p>
+            <h3 id="bankText">120982₺</h3>
+            <input id="bankInput" type="number" min="1" max="100" placeholder="Yüzde giriniz">
+            <br><button class="buy" id="buyBank">Ortak Ol</button>
+            <button class="sell" id="sellBank">Hisse Sat</button>
+        </div>
+        <div class="bigInvestment">
+            <h2>Lineer E-Ticaret</h2>
+            <p>Yeni kurulan, fon arayan bir e-pazaryeri</p>
+            <h3 id="ecomText">190320₺</h3>
+            <input id="ecomInput" type="number" min="1" max="100" placeholder="Yüzde giriniz">
+            <br><button class="buy" id="buyEcom">Ortak Ol</button>
+            <button class="sell" id="sellEcom">Hisse Sat</button>
+        </div>
+        <div class="bigInvestment">
+            <h2>Siyer Teknoloji</h2>
+            <p>Akıllı ev cihazları ve teknoloji girişimi</p>
+            <h3 id="techText">340320₺</h3>
+            <input id="techInput" type="number" min="1" max="100" placeholder="Yüzde giriniz">
+            <br><button class="buy" id="buyTech">Ortak Ol</button>
+            <button class="sell" id="sellTech">Hisse Sat</button>
+        </div>
+    </div>
+    <div id="businesses">
+        <p>Sana ait bir işe sahip ol. Serbest çalışmak vergi ödemesi gerektirir. Kurduğun şirketleri daha sonra satabilirsin. Satarken, işin durumuna göre kâr veya zarar edebilirsin. İşlerin getirileri 30 günde bir alınır.</p>
+        
+        <div class="business">
+            <h2>Kafe</h2>
+            <p>Kendine ait bir kafe aç. Riski ve geliri düşük bir yatırımdır. Vergi gideri: 5000₺/30gün</p>
+            <h3>2.560.500₺</h3>
+            <p id="cafeWorth">İşin değeri: 100000₺</p>
+            <button class="setButton" id="setCafe">İşi kur</button>
+        </div>
+        <div class="business">
+            <h2>İnşaat Şirketi</h2>
+            <p>Müteahhit ol. Riski ortalama, geliri yüksek bir yatırımdır. Vergi gideri: 10000₺/10gün</p>
+            <h3>50.670.500₺</h3>
+            <p id="buildWorth">İşin değeri: 1000000₺</p>
+            <button class="setButton" id="setBuild">İşi kur</button>
+        </div>
+        <div class="business">
+            <h2>Bilgisayar Şirketi</h2>
+            <p>Riski düşük, geliri yüksek bir yatırımdır. Vergi gideri: 20000₺/10gün</p>
+            <h3>100.450.500₺</h3>
+            <p id="compuWorth">İşin değeri: 15000000₺</p>
+            <button class="setButton" id="setComputer">İşi kur</button>
+        </div>
+        <div class="business">
+            <h2>Pahalı Marka</h2>
+            <p>Riski çok düşük, geliri ise çok yüksek bir yatırımdır. Vergi gideri: 100000₺/10gün</p>
+            <h3>240.670.500₺</h3>
+            <p id="brandWorth">İşin değeri: 50000000₺</p>
+            <button class="setButton" id="setBrand">İşi kur</button>
+        </div>
+        <div class="business">
+            <h2>Galeri</h2>
+            <p>Yüksek gelir ve vergi giderli bir yatırımdır. Vergi gideri: 100000₺/5gün</p>
+            <h3>670.890.500₺</h3>
+            <p id="carWorth">İşin değeri: 70000000₺</p>
+            <button class="setButton" id="setCar">İşi kur</button>
+        </div>
+        <div class="business">
+            <h2>Büyük Mağazacılık Şirketi</h2>
+            <p>Yüksek gelir ve vergi giderli bir yatırımdır. Vergi gideri: 100000₺/1gün</p>
+            <h3>2.440.670.500₺</h3>
+            <p id="shopWorth">İşin değeri: 120000000₺</p>
+            <button class="setButton" id="setShop">İşi kur</button>
+        </div>
+    </div>
+    <div id="legal">
+        <div class="legal">
+            <h2>Vergi Borçları</h2>
+            <h3 id="taxDebits">12.987₺</h3>
+            <button id="payTaxes">Şimdi öde</button>
+            <p>Vergiler ödenmemesi halinde işlerinizi olumsuz etkileyecek ve faiz işletilecektir. 100 gün içerisinde ödenmezse banka ve borsadaki paralarınızın borcun %200 kadarına el koyulacaktır.</p>
+        </div>
+     
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
