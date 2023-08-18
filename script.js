@@ -179,7 +179,7 @@ var coalValue = 2200;
 var petHoldings = 0;
 var bankHoldings = 0;
 var ecomHoldings = 0;
-var techHoldings = 0;
+var techHoldings = 1;
 
 var petValue = 90320;
 var bankValue = 120982;
