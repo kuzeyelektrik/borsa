@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="x">
+    <br><input type="text" id="y" placeholder="değer">
+    <br><input type="text" id="y2" placeholder="değer">
+    <br><input type="text" id="y3" placeholder="değer">
+    <br><input type="text" id="y4" placeholder="değer">
+    <br><input type="text" id="y5" placeholder="değer">
+    <br><input type="text" id="y6" placeholder="değer">
+    <br><input type="text" id="y7" placeholder="değer">
+
+    <button id="a">Genel Kayıt</button>
+    <button id="b">İkincil Kayıt</button>
+    <button id="z">Üçüncül Kayıt</button>
+    <button id="u">Dördüncül Kayıt</button>
+    <button id="p">Beşincil Kayıt</button>
+    <button id="d">Altıncıl Kayıt</button>
+
+    <p id="q"></p>
+    <script>
+        document.getElementById("a").addEventListener("click", function(){
+            var t = document.getElementById("x").value;
+            var modT = t[0].toUpperCase() + t.slice(1);
+            var x = 'const '+t+'LotText = document.getElementById("'+t+'Lot"); const '+t+'StatusText = document.getElementById("'+t+'Status"); const '+t+'HoldingText = document.getElementById("'+t+'Holding"); const buy'+modT+' = document.getElementById("buy'+modT+'"); const sell'+modT+' = document.getElementById("sell'+modT+'");';
+            document.getElementById("q").textContent = x;
+        });
+        document.getElementById("b").addEventListener("click", function(){
+            var t = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+            var modT = t[0].toUpperCase() + t.slice(1);
+            var x = 'var '+t+'Holdings = 0;var '+t+'Value = '+y+';var cost'+modT+' = 0;var today'+modT+' = 0;';
+            document.getElementById("q").textContent = x;
+        });
+        document.getElementById("a").addEventListener("click", function(){
+            var t = document.getElementById("x").value;
+            var modT = t[0].toUpperCase() + t.slice(1);
+            var x = 'const '+t+'LotText = document.getElementById("'+t+'Lot"); const '+t+'StatusText = document.getElementById("'+t+'Status"); const '+t+'HoldingText = document.getElementById("'+t+'Holding"); const buy'+modT+' = document.getElementById("buy'+modT+'"); const sell'+modT+' = document.getElementById("sell'+modT+'");';
+            document.getElementById("q").textContent = x;
+        });
+        document.getElementById("z").addEventListener("click", function(){
+            var t = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+            var y2 = document.getElementById("y2").value;
+            var y3 = document.getElementById("y3").value;
+            var y4 = document.getElementById("y4").value;
+            var y5 = document.getElementById("y5").value;
+            var y6 = document.getElementById("y6").value;
+            var y7 = document.getElementById("y7").value;
+            var x = 'var '+t+'NewsPos = ["'+y+'","'+y2+'","'+y3+'","'+y4+'","'+y5+'","'+y6+'","'+y7+'"];';
+            document.getElementById("q").textContent = x;
+        });
+        document.getElementById("u").addEventListener("click", function(){
+            var t = document.getElementById("x").value;
+            var modT = t[0].toUpperCase() + t.slice(1);
+            var x = "const buyAll"+modT+" = document.getElementById('buyAll"+modT+"'); const sellAll"+modT+" = document.getElementById('sellAll"+modT+"');";
+            document.getElementById("q").textContent = x;
+        });
+        document.getElementById("p").addEventListener("click", function(){
+            var t = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+            var y2 = document.getElementById("y2").value;
+            var y3 = document.getElementById("y3").value;
+            var y4 = document.getElementById("y4").value;
+            var y5 = document.getElementById("y5").value;
+            var y6 = document.getElementById("y6").value;
+            var y7 = document.getElementById("y7").value;
+        
+            var x = ''+t+' = localStorage.getItem("'+t+'");'+y+' = localStorage.getItem("'+y+'");'+y2+' = localStorage.getItem("'+y2+'");'+y3+' = localStorage.getItem("'+y3+'");'+y4+' = localStorage.getItem("'+y4+'");'+y5+' = localStorage.getItem("'+y5+'");'+y6+' = localStorage.getItem("'+y6+'");'+y7+' = localStorage.getItem("'+y7+'");';
+            document.getElementById("q").textContent = x;
+        });
+        document.getElementById("d").addEventListener("click", function(){
+            var t = document.getElementById("x").value;
+            var modT = t[0].toUpperCase() + t.slice(1);
+            var x = "const "+t+"Text = document.getElementById('"+t+"Text'); ";
+            document.getElementById("q").textContent = x;
+        });
+    </script>
+</body>
+</html>
