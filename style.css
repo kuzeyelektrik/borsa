@@ -1,0 +1,707 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 1px;
+}
+#day{
+    font-weight: 600;
+    font-size: 20px;
+}
+#money{
+    font-size: 20px;
+}
+#worth{
+    font-size: 18px;
+}
+#setStocks{
+    margin-bottom: 50px;
+}
+@keyframes neon-border {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 255, 255, 0.9),
+                    0 0 10px rgba(0, 255, 255, 0.6),
+                    0 0 15px rgba(0, 255, 255, 0.3);
+    }
+    40% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.6),
+                    0 0 15px rgba(0, 255, 255, 0.3),
+                    0 0 20px rgba(0, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 5px rgba(255, 0, 150, 0.9),
+                    0 0 10px rgba(255, 0, 150, 0.6),
+                    0 0 15px rgba(255, 0, 150, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 0, 150, 0.6),
+                    0 0 15px rgba(255, 0, 150, 0.3),
+                    0 0 20px rgba(255, 0, 150, 0.1);
+    }
+}
+
+.stock{
+    background-color: #f2f2f2;
+    color: #272727;
+    padding: 10px;
+    border: #272727;
+    border-radius: 3px;
+    width: 300px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 3px;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 290px;
+    box-shadow: 3px 3px 3px 3px #4545;
+    z-index: 100;
+}
+.stock p{
+    font-weight: 600;
+    margin-top: 10px;
+}
+.stock h3{
+    font-family: 'Roboto', sans-serif;
+
+}
+.buy{
+    background-color: green;
+    color: #f2f2f2;
+    padding: 5px;
+    border: #272727;
+    border-radius: 2px;
+    height: 40px;
+    width: 100px;
+    font-weight: 700;
+    margin-top: 10px;
+
+}
+.sell{
+    background-color: red;
+    color: #f2f2f2;
+    padding: 5px;
+    border: #272727;
+    border-radius: 2px;
+    height: 40px;
+    width: 100px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.stock h3{
+    font-size: 30px;
+}
+#news{
+    background-color: #f2f2f2;
+    color: #272727;
+    position: fixed;
+    padding: 10px;
+    top: 10px;
+    display: none;
+}
+#closeNews{
+    margin-right: 10px;
+    height: 30px;
+    background-color: #f2f2f2;
+    color: #272727;
+    border: #272727;
+    border:  #4545;
+    border-radius: 2px;
+    font-weight: 600;
+    width: 150px;
+    box-shadow: 1px 1px 1px 1px #4545;
+    margin-top: 20px;
+}
+#alert{
+    position: fixed;
+    background-color: rgb(175, 11, 11);
+    color: #f2f2f2;
+    border: #272727;
+    border-radius: 1px;
+    top: 1px;
+    padding: 10px;
+    display: none;
+    width: 100px;
+}
+#alertDescription{
+    font-size: 12px;
+}
+#alertHeader{
+    text-transform: uppercase;
+    font-size: 15px;
+}
+#skipDay{
+    width: 100px;
+    height: 50px;
+    background-color: #f2f2f2;
+    color: #272727;
+    border:  #4545;
+    border-radius: 2px;
+    background-color: #f2f2f2;
+    font-weight: 600;
+    color: #272727;
+}
+#newsBtn{
+    width: 100px;
+    height: 50px;
+    background-color: #f2f2f2;
+    color: #272727;
+    border: #272727;
+    border:  #4545;
+    border-radius: 2px;
+    font-weight: 600;
+}
+#currencies{
+    display: none;
+}
+.currency{
+    background-color: #f2f2f2;
+    color: #272727;
+    padding: 10px;
+    border: #272727;
+    border-radius: 3px;
+    width: 300px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 250px;
+}
+.currency h3{
+    font-size: 26px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+.currency input{
+    margin-bottom: 10px;
+    height: 40px;
+    width: 150px;
+    font-size: 30px;
+}
+.setStocks{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#currencyPortfolio{
+    display: none;
+}
+#setIstanbul{
+    border-bottom: 2px solid #272727;
+}
+#emtia{
+    display: none;
+}
+.emtiaStock{
+    background-color: #f2f2f2;
+    color: #272727;
+    padding: 10px;
+    border: #272727;
+    border-radius: 3px;
+    width: 300px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 200px;
+}
+.emtiaStock h3{
+    font-size: 26px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+#emtiaPortfolio{
+    display: none;
+}
+#bigInvestmentsPortfolio{
+    display: none;
+}
+.bigInvestment{
+    background-color: #f2f2f2;
+    color: #272727;
+    padding: 10px;
+    border: #272727;
+    border-radius: 3px;
+    width: 300px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 300px;
+}
+.bigInvestment h3{
+    font-size: 26px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+.bigInvestment input{
+    width: 100px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.bigInvestment h3 p{
+    font-size: 10px;
+}
+#bigInvestments{
+    display: none;
+}
+.sellAll{
+    width: 120px;
+    background-color: orangered;
+    color: #f2f2f2;
+    border: #272727;
+    border-radius: 2px;
+    margin-top: 10px;
+    height: 39px;
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: top;
+}
+.buyAll{
+    width: 120px;
+    background-color: blue;
+    color: #f2f2f2;
+    border: #272727;
+    border-radius: 2px;
+    margin-top: 10px;
+    height: 39px;
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: top;
+}
+.business{
+    background-color: #f2f2f2;
+    color: #272727;
+    border: #272727;
+    border-radius: 2px;
+    padding: 10px;
+    width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    height: 300px;
+    vertical-align: top;
+    margin-top: 10px;
+}
+.business button{
+    margin-top: 20px;
+}
+.business p{
+    margin-top: 20px;
+}
+.business h3{
+    margin-top: 20px;
+}
+.business h3, .business p{
+    font-family: 'Roboto', sans-serif;
+}
+#autoDiv{
+    margin-bottom: 150px;
+}
+#businesses{
+    display: none;
+
+}
+.setButton{
+    background-color: green;
+    color: #fff;
+    font-weight: 600;
+    border: #272727;
+    width: 100px;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+.legal{
+    background-color: #f2f2f2;
+    color: #272727;
+    border: #272727;
+    border-radius: 2px;
+    padding: 20px;
+    width: 300px;
+    margin-right: 10px;
+    margin-left: 10px;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 20px;
+}
+.legal button{
+    background-color: green;
+    color: #f2f2f2;
+    width: 100px;
+    height: 40px;
+    padding: 4px;
+    font-weight: 600;
+    border: #272727;
+    border-radius: 2px;
+}
+.legal h3{
+    font-family: 'Roboto', sans-serif;
+
+}
+#legal{
+    display: none;
+}
+.loadBtn{
+    width: 330px;
+    font-weight: 600;
+    margin-top: 20px;
+    height: 50px;
+    background-color: #f2f2f2;
+    color: #272727;
+    border: #272727;
+    border-radius: 2px;
+}
+#settingsCloseBtn{
+    font-weight: 900;
+    margin-top: 30px;
+}
+#darkModeBtn{
+    width: 50px;
+    height: 22px;
+    border:1px solid  #f2f2f2;
+    border-radius: 300px;
+    padding: 1px;
+    transition: all .2s;
+}
+#darkModeCircle{
+    height: 18px;
+    width: 20px;
+    background-color: #f2f2f2;
+    border:  #272727;
+    border-radius: 4000px;
+    margin-top: 2px;
+    margin-left: 2px;
+    transition: all .2s;
+}
+#soundBtn{
+    background-color: #32EA3E;
+    width: 50px;
+    height: 22px;
+    border:1px solid  #f2f2f2;
+    border-radius: 300px;
+    padding: 1px;
+    transition: all .2s;
+}
+#soundCircle{
+    height: 18px;
+    width: 20px;
+    background-color: #ffff;
+    border:  #272727;
+    border-radius: 4000px;
+    margin-top: 2px;
+    margin-left: 2px;
+    transition: all .2s;
+    float: right;
+}
+#musicBtn{
+    background-color: #32EA3E;
+    width: 50px;
+    height: 22px;
+    border:1px solid  #f2f2f2;
+    border-radius: 300px;
+    padding: 1px;
+    transition: all .2s;
+}
+#musicCircle{
+    height: 18px;
+    width: 20px;
+    background-color: #ffff;
+    border:  #272727;
+    border-radius: 4000px;
+    margin-top: 2px;
+    margin-left: 2px;
+    transition: all .2s;
+    float: right;
+}
+#settings{
+    display: none;
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 3px;
+    border: #272727;
+}
+#settingsBtn{
+    font-size: 30px;
+}
+#teach{
+    background-color: #fff;
+    position: absolute;
+    top: 30px;
+    padding: 30px;
+    border: 2px solid #f2f2f2;
+    border-radius: 3px;
+    left: 50%;
+    top: 50%;
+    opacity: 100%;
+    max-width: 80%;
+    width: 78%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 500;
+    color: #272727;
+}
+#blocker{
+    z-index: 200;
+    background-color: #272727;
+    opacity: 70%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: none;
+}
+#teach button{
+    width: 200px;
+    height: 40px;
+    border: #272727;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+#endTeach{
+    background-color: #D32F2F;
+    color: #f2f2f2;
+}
+#nextTeach{
+    background-color: #FF7043;
+    color: #fff;
+}
+#ports{
+    border: 2px solid #f2f2f2;
+    border-left: 0;
+    border-radius: 0 10px 10px 0;
+    width: fit-content;
+    padding: 5px;
+    position: fixed;
+    background-color: #272727;
+}
+#innerPorts{
+    display: none;
+}
+#controls{
+    background-color: #272727;
+    position: fixed;
+    bottom: 0;
+    width: 85%;
+    z-index: 200;
+    padding: 10px;
+    animation: neon-border 10s infinite;
+    border-radius: 10px 10px 0 0;
+}
+#controls div{
+    display: inline-block;
+    vertical-align: top;
+}
+#btnPart button{
+    vertical-align: auto;
+}
+#btnPart{
+    display: inline-block;
+    float: right;
+    width: 40%;
+}
+#infoPart{
+    display: inline-block;
+    float: left;
+    width: 55%;
+}
+#build{
+    margin-bottom: 150px;
+}
+
+#moneyFull .material-symbols-outlined{
+    margin-top: 10px;
+    color: #8BC34A;
+}
+#money{
+    display: inline-block;
+    margin-left: 10px;
+    color: #8BC34A;
+}
+#worth{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 25px;
+}
+#begin{
+    background-color: #454545;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    visibility: hidden;
+    animation: beginDisplay 6s 1;
+    transition: all .2s;
+}
+#begin h1{
+    font-size: 70px;
+    text-align: center;
+    margin-top: 100px;
+    animation: kutdevAnim 2s 1;
+
+}
+#begin h2{
+    text-align: center;
+    display: inline-block;
+
+}
+#begin p{
+    text-align: center;
+    animation: sunduAnim 3s 1;
+}
+#firstBegin{
+    animation: begin1 5s 1;
+    color: green;
+}
+#secondBegin{
+    animation: begin2 5s 1;
+    color: red;
+}
+#credit{
+    background-color: #272727;
+    color: #f2f2f2;
+    text-align: center;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+#creditBtn{
+    width: 150px;
+    height: 35px;
+    background-color: transparent;
+    border: 2px solid #f2f2f2;
+    font-weight: 600;
+    margin-top: 20px;
+    border-radius: 4px;
+    color: #f2f2f2;
+}
+.creditInfo{
+    animation: credit1 1s 1;
+}
+.creditInfo2{
+    animation: credit2 2s 1;
+}
+.creditInfo3{
+    animation: credit3 3s 1;
+}
+.creditInfo4{
+    animation: credit4 4s 1;
+}
+.creditDisplay{
+    animation: creditDisplay 10s 1;
+    
+}
+#credit p{
+    margin-top: 30px;
+}
+#credit h1{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    animation: creditHeader .6s 1;
+
+}
+@keyframes beginDisplay{
+    from{visibility: visible;}
+    to{visibility: hidden;}
+
+}
+@keyframes kutdevAnim{
+    from{opacity: 0%;}
+    to{opacity: 100%;}
+
+}
+@keyframes sunduAnim{
+    from{opacity: 0%;}
+    to{opacity: 100%;}
+}
+@keyframes begin1{
+    from{transform: translateX(-150px);}
+    to{transform: translateX(0px); color: red;}
+}
+@keyframes begin2{
+    from{transform: translateX(150px);}
+    to{transform: translateX(0px); color: green;}
+}
+@keyframes creditDisplay{
+    from{visibility: visible;}
+    to{visibility: hidden;}
+}
+@keyframes creditHeader{
+    from{opacity: 0%;}
+    to{opacity: 100%;}
+
+}
+@keyframes credit1{
+    from{transform: translateX(-150px);}
+    to{transform: translateX(0px);}
+}
+@keyframes credit2{
+    from{transform: translateX(150px);}
+    to{transform: translateX(0px);}
+}
+@keyframes credit3{
+    from{transform: translateX(-150px);}
+    to{transform: translateX(0px);}
+}
+@keyframes credit4{
+    from{transform: translateX(150px);}
+    to{transform: translateX(0px);}
+}
+#promptAlert{
+    background-color: #FF7F7F;
+    color: #fff;
+    position: fixed;
+    padding: 10px;
+    border: #272727;
+    border-radius: 3px;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    top: 60px;
+    display: none;
+}
+#promptHeader{
+    margin-top: 10px;
+    font-weight: 800;
+}
+#promptDescription{
+    margin-top: 10px;
+    font-weight: 300;
+}
+#prompt1{
+    background-color: #fff;
+    color: #FF7F7F;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    font-weight: 600;
+    width: 100px;
+    height: 30px;
+}
+#prompt2{
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    font-weight: 600;
+    width: 100px;
+    height: 30px;
+
+}
+#beforePayout{
+    font-size: 10px;
+    display: none;
+}
